@@ -9,7 +9,7 @@ namespace AppMinisterialService.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "App Ministerial Services";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
         }
 
