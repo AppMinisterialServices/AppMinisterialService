@@ -7,8 +7,44 @@
              x:Class="AppMinisterialService.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
+
+        <Grid>
+            <Image Source="background.jpg" Aspect="AspectFill"></Image>
+
+            <BoxView Color="#B1B1B7" Opacity="0.6"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logo.jpg" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"></Image>
+
+                <StackLayout Grid.Row="1" Padding="10,20">
+                    <Entry Placeholder="Correo eléctronico" PlaceholderColor="White" TextColor="White"/>
+                    <Entry Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"  TextColor="White"/>
+
+                    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                        <Button VerticalOptions="Center" Text="Iniciar sesion" BorderRadius="20"  Command="{Binding LoginCommand}"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="White" />
+                            <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Center" Text="Aceptar terminos y condiciones" TextColor="Blue"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+               
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Recuperar contraseña" FontAttributes="Bold" TextColor="Blue"/>
+                        <Label Text="Registrase" HorizontalOptions="EndAndExpand" FontAttributes="Bold" TextColor="Blue"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
